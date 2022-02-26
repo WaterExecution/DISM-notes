@@ -1,0 +1,4 @@
+pyftpdlib>=1.5.6
+pycryptodome
+pyopenssl
+pillow

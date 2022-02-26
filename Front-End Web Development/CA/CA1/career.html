@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <title>Hoot hoot</title>
+      <meta name="description" content="The HTML5 Herald">
+      <meta name="author" content="SitePoint">
+      <link rel="shortcut icon" type="image/jpg" href="images/owl.ico"/>
+      <!--Cross Browser-->
+      <link href="https://unpkg.com/sanitize.css" rel="stylesheet"/>
+      <!--Cross Browser-->
+      <!--CSS/JS-->
+      <link rel="stylesheet" href="css/styles.css">
+      <script src="js/scroll.js"></script>
+      <script src="js/bulb.js"></script>
+      <script src="js/search.js"></script>
+      <!--CSS/JS-->
+      <!--Fonts-->
+      <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+      <!--Fonts-->
+   </head>
+   <body>
+      <header id="navbar">
+         <nav id="header-top">
+            <img src="images/off.png" alt="bulb" width=30 class="bulb" id="bulb">
+            <input type="checkbox" name="checkbox" class="switch" id="switch" onclick="switchTheme()"> <!-- Dark/Light mode toggle -->
+            <section id="searchBar">
+               <a href="form.html" id="formButton"><i class="fa fa-envelope"></i></a> <!-- Button for form.html -->
+               <input type="text" id="search" placeholder="Search">
+               <button type="submit" onClick="find()"><i class="fa fa-search"></i></button> <!-- Use for highlighting text in specific area-->
+            </section>
+         </nav>
+         <nav id="header-bottom">
+            <a href="index.html" id="logo"></a>
+            <h1 id="logoName">Hoot Hoot</h1> <!-- Name next to logo -->
+            <ul id="header-right">  <!-- Navigation bar -->
+               <li><a href="index.html">Home</a></li>
+               <li><a href="past.html">My Past</a></li>
+               <li><a href="poly.html">Poly Life</a></li>
+               <li><a href="career.html">Career Prospect</a></li>
+            </ul>
+         </nav>
+      </header>
+      <main>
+         <article class="dark-section"> <!-- Introduction to career -->
+            <h1>Course in SP</h1>
+            <h2 style="text-align:center;">Diploma in Infocomm Security Management</h2>
+            <p style="text-align:center;">DISM curriculum covers the important areas of<br> security technology, security management,<br> information technology, law and teamwork and communications.</p>
+            <h2 style="text-align:center;">Most Common Cybersecurity Relevant Module You'll Study</h2>
+            <ul style="display: table;margin: 0 auto;">
+               <li>Infocomm Security</li>
+               <li>Security Policy and Incident Management</li>
+               <li>Ethical Hacking and Defences</li>
+            </ul>
+            <p style="text-align:center;margin-top:50px;"> <!-- List of searchable courses -->
+               <i id="searchIcon" class="fa">&#xf002;</i> Search the following modules for relevant careers!
+            </p>
+            <ul style="display: table;margin: 0 auto;">
+               <li>Infocomm Security</li>
+               <li>Linux Administration and Security</li>
+               <li>Security Policy and Incident Management</li>
+               <li>Securing Microsoft Windows</li>
+               <li>Applied Cryptography</li>
+               <li>Digital Forensics and Investigation</li>
+               <li>Computer Law and Investigation</li>
+               <li>Securing Microsoft Windows</li>
+               <li>Secure coding</li>
+            </ul>
+         </article>
+         <article class="light-section"> <!-- Table arranged in my preference but can quasi as a reference for jobs prospect -->
+            <table class="careerTable searchMe" style="table-layout: fixed;width:100%;">
+               <colgroup>
+                  <col style="width:19%;">
+                  <col style="width:27%;">
+                  <col style="width:27%;">
+				  <col style="width:27%;">
+               </colgroup>
+               <thead>
+                  <tr>
+					 <th class="tableDescription">My Job Preference</th>
+                     <th class="tableDescription">Career in Cybersecurity</th>
+                     <th class="tableDescription">Relevant Courses</th>
+                     <th class="tableDescription">Job Description</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+					 <td class="rank"><i class="fa">&#xf005;&#xf005;&#xf005;&#xf005;&#xf005;</i></td>
+                     <td class="career">Security Engineer</td>
+                     <td class="courses">
+                        <ul>
+                           <li>Infocomm Security</li>
+                           <li>Linux Administration and Security</li>
+                           <li>Security Policy and Incident Management</li>
+                           <li>Securing Microsoft Windows</li>
+                        </ul>
+                     </td>
+                     <td class="jobDesc">Build technologies that help keep computer architecture safe such as centralized logging.</td>
+                  </tr>
+                  <tr>
+                     <td class="rank"><i class="fa">&#xf005;&#xf005;&#xf005;&#xf005;&#xf005;</i></td>
+                     <td class="career">Security Consultant</td>
+                     <td class="courses">
+                        <ul>
+                           <li>Infocomm Security</li>
+                           <li>Linux Administration and Security</li>
+                           <li>Security Policy and Incident Management</li>
+                           <li>Securing Microsoft Windows</li>
+                           <li>Ethical Hacking and Defences</li>
+                        </ul>
+                     </td>
+                     <td class="jobDesc">Plan, design, build, configure, code, run, maintain, and monitor security controls from being breached.</td>
+                  </tr>
+                  <tr>
+                     <td class="rank"><i class="fa">&#xf005;&#xf005;&#xf005;&#xf005;&#xf089;</i></td>
+                     <td class="career">Security Architect</td>
+                     <td class="courses">
+                        <ul>
+                           <li>Infocomm Security</li>
+                           <li>Linux Administration and Security</li>
+                           <li>Security Policy and Incident Management</li>
+                           <li>Securing Microsoft Windows</li>
+                           <li>Ethical Hacking and Defences</li>
+                        </ul>
+                     </td>
+                     <td class="jobDesc">Design, build, and implement security of network, somewhere in between a Security Specialist and a Security Consultant</td>
+                  </tr>
+                  <tr>
+                     <td class="rank"><i class="fa">&#xf005;&#xf005;&#xf005;&#xf005;&#xf089;</i></td>
+                     <td class="career">Penetration Tester</td>
+                     <td class="courses">
+                        <ul>
+                           <li>Ethical Hacking and Defences</li>
+                        </ul>
+                     </td>
+                     <td class="jobDesc">Perform threat modeling, security assessments, and ethical hacking of networks, systems, and web-based applications.</td>
+                  </tr>
+                  <tr>
+                     <td class="rank"><i class="fa">&#xf005;&#xf005;&#xf005;&#xf005;&#xf089;</i></td>
+                     <td class="career">Malware Analyst</td>
+                     <td class="courses">
+                        <ul>
+                           <li>Malware Reverse Engineering</li>
+                        </ul>
+                     </td>
+                     <td class="jobDesc">Disassemble, deconstruct, and reverse engineer the malicious code.</td>
+                  </tr>
+                  <tr>
+                     <td class="rank"><i class="fa">&#xf005;&#xf005;&#xf005;&#xf005;</i></td>
+                     <td class="career">Security Code Auditor</td>
+                     <td class="courses">
+                        <ul>
+                           <li>Secure coding</li>
+                           <li>Back-End Web Development</li>
+                           <li>Ethical Hacking and Defences</li>
+                        </ul>
+                     </td>
+                     <td class="jobDesc">Reading source code, performing penetration testing based on source code.</td>
+                  </tr>
+                  <tr>
+                     <td class="rank"><i class="fa">&#xf005;&#xf005;&#xf005;&#xf005;</i></td>
+                     <td class="career">Cybercrime Investigator</td>
+                     <td class="courses">
+                        <ul>
+                           <li>Computer Law and Investigation</li>
+                           <li>Digital Forensics and Investigation</li>
+                        </ul>
+                     </td>
+                     <td class="jobDesc">Somewhere between a detective and a Digital Forensics expert</td>
+                  </tr>
+                  <tr>
+                     <td class="rank"><i class="fa">&#xf005;&#xf005;&#xf005;&#xf089;</i></td>
+                     <td class="career">Digital Forensics</td>
+                     <td class="courses">
+                        <ul>
+                           <li>Digital Forensics and Investigation</li>
+                        </ul>
+                     </td>
+                     <td class="jobDesc">Extract relevant data from computer hardware and software, networking systems, mobile devices.</td>
+                  </tr>
+                  <tr>
+                     <td class="rank"><i class="fa">&#xf005;&#xf005;&#xf005;&#xf089;</i></td>
+                     <td class="career">Security Administrator</td>
+                     <td class="courses">
+                        <ul>
+                           <li>Infocomm Security</li>
+                           <li>Linux Administration and Security</li>
+                           <li>Security Policy and Incident Management</li>
+                           <li>Securing Microsoft Windows</li>
+                        </ul>
+                     </td>
+                     <td class="jobDesc">Ensure that systems are working as designed by making changes, applying patches recommended by Security Analyst</td>
+                  </tr>
+                  <tr>
+                     <td class="rank"><i class="fa">&#xf005;&#xf005;&#xf005;</i></td>
+                     <td class="career">Security Analyst</td>
+                     <td class="courses">
+                        <ul>
+                           <li>Infocomm Security</li>
+                           <li>Ethical Hacking and Defences</li>
+                           <li>Security Policy and Incident Management</li>
+                        </ul>
+                     </td>
+                     <td class="jobDesc">Triage security incidents, develop policies and procedures and reviewing best practices and providing training for company or organization employees.</td>
+                  </tr>
+                  <tr>
+                     <td class="rank"><i class="fa">&#xf005;&#xf005;&#xf005;</i></td>
+                     <td class="career">Security Software Developer</td>
+                     <td class="courses">
+                        <ul>
+                           <li>Secure coding</li>
+                           <li>Back-End Web Development</li>
+                        </ul>
+                     </td>
+                     <td class="jobDesc">Somewhere in between a Security Code Auditor and a Software Developer</td>
+                  </tr>
+                  <tr>
+                     <td class="rank"><i class="fa">&#xf005;&#xf005;&#xf089;</i></td>
+                     <td class="career">Risk Manager</td>
+                     <td class="courses">
+                        <ul>
+                           <li>Security Policy and Incident Management</li>
+                        </ul>
+                     </td>
+                     <td class="jobDesc">Develop and communicate risk policies for an organization</td>
+                  </tr>
+                  <tr>
+                     <td class="rank"><i class="fa">&#xf005;&#xf005;&#xf089;</i></td>
+                     <td class="career">Security Incident Responder</td>
+                     <td class="courses">
+                        <ul>
+                           <li>Security Policy and Incident Management</li>
+                        </ul>
+                     </td>
+                     <td class="jobDesc">Investigate and document cybersecurity incidents within an organization</td>
+                  </tr>
+                  <tr>
+                     <td class="rank"><i class="fa">&#xf005;&#xf005;&#xf089;</i></td>
+                     <td class="career">Data Protection Officer</td>
+                     <td class="courses">
+                        <ul>
+                           <li>Computer Law and Investigation</li>
+                        </ul>
+                     </td>
+                     <td class="jobDesc">Appropriately apply the laws protecting personal data and educating the company about compliance, data processing, and conducting regular security audits.</td>
+                  </tr>
+                  <tr>
+                     <td class="rank"><i class="fa">&#xf005;&#xf005;</i></td>
+                     <td class="career">Security Specialist</td>
+                     <td class="courses">
+                        <ul>
+                           <li>Security Policy and Incident Management</li>
+                        </ul>
+                     </td>
+                     <td class="jobDesc">Cybersecurity specialists need to be able to communicate well and be comfortable in team roles. Leans more toward being technical with customer service skills</td>
+                  </tr>
+                  <tr>
+                     <td class="rank"><i class="fa">&#xf005;&#xf089;</i></td>
+                     <td class="career">Cryptanalyst</td>
+                     <td class="courses">
+                        <ul>
+                           <li>Mathematics</li>
+                           <li>Applied Cryptography</li>
+                        </ul>
+                     </td>
+                     <td class="jobDesc">Decrypt data, breaking down algorithms and ciphers to access information. </td>
+                  </tr>
+                  <tr>
+                     <td class="rank"><i class="fa">&#xf005;</i></td>
+                     <td class="career">Cryptographer</td>
+                     <td class="courses">
+                        <ul>
+                           <li>Mathematics</li>
+                           <li>Applied Cryptography</li>
+                        </ul>
+                     </td>
+                     <td class="jobDesc">Go university and study Mathematics. A lot of reading white papers.</td>
+                  </tr>
+               </tbody>
+            </table>
+         </article>
+      </main>
+      <footer>
+         <section id="social">
+            <h1>Stay connected</h1>
+            <p>Join to receive blog updates and tips.</p>
+            <input type="text" placeholder="Email Address..">
+            <button type="submit">Sign-Up</button>
+            <section id="socialMedia">
+               <a href="#" class="fa fa-reddit" style="color:red;"></a>
+               <a href="#" class="fa fa-twitter" style="color:#55ACEE;"></a>
+               <a href="#" class="fa fa-youtube" style="color:red;"></a>
+               <a href="#" class="fa fa-github" style="color:black;"></a>
+            </section>
+         </section>
+         <section id="footerDesc"> <!-- Description of website -->
+            <h1>Hoot Hoot</h1>
+            <p>Hoot Hoot was designed to inspire any cybersecurity student and guide their way through the different cybersecurity career sector.</p>
+         </section>
+         <nav id="footerNav">
+            <h1>Navigate</h1>
+            <ul id="footerNavLeft">
+               <li><a href="index.html">Home <i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+               <li><a href="past.html">My Past <i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+               <li><a href="poly.html">Poly Life <i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+            </ul>
+            <ul id="footerNavRight">
+               <li><a href="career.html">Career Prospect <i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+               <li><a href="form.html">Form <i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+            </ul>
+         </nav>
+         <section id="footerBottom">
+            <ul>
+               <li><a href="#tc.html">Privacy Policy</a></li>
+               <li><a href="#">Sitemap</a></li>
+			   <li><a href="#reference">References</a></li>
+               <li>&copy; 2021 Hoot Hoot</li>
+            </ul>
+         </section>
+         <section id="reference">
+            <section class="popup">
+               <h2>Image References</h2>
+               <a id="close" href="#">&times;</a>
+               <ol id="referenceList">
+                  <li>https://unsplash.com/photos/7MgsXgMpQak - woodTexture.jpg</li>
+				  <li>https://unsplash.com/photos/BYPMtjYMEyk - Switzerland Mountain</li>
+                  <li>https://unsplash.com/photos/ueJJlc4Mclk - owl.png</li>
+                  <li>https://unsplash.com/photos/G7qObqWnCIA - featherTexture.jpg</li>
+                  <li>https://imgur.com/user/sebgames51 - owl2.jpg</li>
+                  <li>https://codepen.io/ahmadbassamemran/pen/yLBXBmy - day.png/night.png</li>
+               </ol>
+            </section>
+         </section>
+      </footer>
+   </body>
+</html>
