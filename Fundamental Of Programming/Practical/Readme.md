@@ -96,3 +96,15 @@ var circle = new Circle(2);
 
 console.log(circle.getArea());
 ```
+
+# More Advanced
+```
+[...Array(10).keys()]
+[...Array(10).keys()].slice(1)
+
+# javascript has a max of 65535 arguments
+
+Math.max(...numbers)
+nums.reduce((acc, val) => { return acc > val ? acc : val; });
+nums.reduce((a, b) => (a + b))
+```
