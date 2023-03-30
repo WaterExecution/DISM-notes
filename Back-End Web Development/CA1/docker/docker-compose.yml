@@ -1,0 +1,35 @@
+version: '3.9'
+services:
+ spair:
+  image: node:latest
+  ports:
+   - "8080:8080"
+  volumes:
+   - ./node:/usr/app
+  command: node /usr/app/app.js
+  restart: always
+  networks:
+  - sp
+ db:
+  image: mysql:latest
+  restart: always
+  volumes:
+   - ./db/db.sql:/docker-entrypoint-initdb.d/db.sql
+  ports:
+   - "3306:3306"
+  environment:
+   - MYSQL_ROOT_PASSWORD=itsmewater
+   - MYSQL_DATABASE=SP_AIR
+  networks:
+  - sp
+
+networks:
+ sp:
+  name: sp
+
+
+#/////////////////////////////////
+#// Name: Tong Yew Ching Kelvin //
+#// Admission: 2136871          //
+#// Class: DISM/FT/2B/21        //
+#/////////////////////////////////

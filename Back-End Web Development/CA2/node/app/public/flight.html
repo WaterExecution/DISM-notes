@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="">
+  <meta name="keywords" content="DISM Airlines">
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+  <!--Fonts-->
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!--CSS/JS-->
+  <link rel="stylesheet" href="css/styles.css?v=1.0">
+  <script src="js/flight.js"></script>
+
+  <title>SP AIR</title>
+
+	<script>
+		setInterval( function(){fetch("/refresh")} , 10*60*1000 );
+	</script>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top ">
+    <a class="navbar-brand" href="index.html">SP AIR</a>
+    <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse"
+      data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="flight.html">Check Flight</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="login.html">Log In</a>
+        </li>
+		<li class="nav-item">
+          <a class="nav-link" href="register.html">Sign Up</a>
+        </li>
+		<li class="nav-item">
+          <a href="profile.html" class="profileButton"><i class="fa fa-user"></i></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- Welcome -->]
+  <header class="filler"></header>
+    <section class="section">
+        <div class="container">
+            <form>
+                <div class="form-row">
+                    <div class="form-group col-lg-3 col-md-12 col-sm-12" id="flightOrigin">
+                    </div>
+                    <div class="form-group col-lg-3 col-md-12 col-sm-12" id="flightDestination">
+                    </div>
+                    <div class="form-group col-lg-3 col-md-12 col-sm-12">
+                        <input type="text" onfocus="(this.type='date')" placeholder="Depart Date" class="form-control" id="date" placeholder="Depart Date" required>
+                    </div>
+					<div class="form-group col-lg-3 col-md-12 col-sm-12">
+                        <input type="text" onfocus="(this.type='date')" placeholder="Return Date" class="form-control" id="date1" placeholder="Return Date" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-check col-lg-8 col-md-8 col-sm-12 pl-4">
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-12">
+                        <button type="button" onclick="search()" class="btn btn-primary float-right">Search</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+    <section class="section" id="flights">
+	</section>
+  <section class="filler"></section>
+  <!-- Footer -->
+  <footer class="page-footer fixed-bottom">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <h5>Copyright SP AIR © 2022. All rights reserved.</h5>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

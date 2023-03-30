@@ -1,0 +1,15 @@
+References:
+https://dev.to/tahmid02016/speed-up-python-code-50fk
+https://stackoverflow.com/questions/17166074/most-efficient-way-of-making-an-if-elif-elif-else-statement-when-the-else-is-don
+https://stackoverflow.com/questions/517970/how-to-clear-the-interpreter-console
+https://stackoverflow.com/questions/715417/converting-from-a-string-to-boolean-in-python
+https://docs.python.org/
+https://pypi.org/project/tabulate/
+https://cryptobook.nakov.com/mac-and-key-derivation/pbkdf2
+https://codezup.com/socket-server-with-multiple-clients-model-multithreading-python/
+regex:
+https://www.geeksforgeeks.org/check-if-email-address-valid-or-not-in-python/
+https://cryptobook.nakov.com/digital-signatures/rsa-sign-verify-examples
+https://pycryptodome.readthedocs.io/en/latest/src/public_key/rsa.html
+https://stackoverflow.com/questions/21327491/using-pycrypto-how-to-import-a-rsa-public-key-and-use-it-to-encrypt-a-string
+https://dev.to/aaronktberry/generating-encrypted-key-pairs-in-python-69b

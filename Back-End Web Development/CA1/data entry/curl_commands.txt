@@ -1,0 +1,135 @@
+curl --location --request POST 'localhost:8080/users' \
+--header 'Content-Type: application/x-www-form-urlencoded' \
+--data-urlencode 'username=Terry Tan' \
+--data-urlencode 'email=terry@gmail.com' \
+--data-urlencode 'contact=912234567' \
+--data-urlencode 'password=password' \
+--data-urlencode 'role=Customer' \
+--data-urlencode 'profile_pic_url=https://www.abc.com/terry.jpg'
+
+curl --location --request POST 'localhost:8080/users' \
+--header 'Content-Type: application/x-www-form-urlencoded' \
+--data-urlencode 'username=David Tan' \
+--data-urlencode 'email=david@gmail.com' \
+--data-urlencode 'contact=87654321' \
+--data-urlencode 'password=qwerty' \
+--data-urlencode 'role=Customer' \
+--data-urlencode 'profile_pic_url=https://www.google.com/c4.png'
+
+curl --location --request GET 'localhost:8080/users'
+
+curl --location --request PUT 'localhost:8080/users/1' \
+--header 'Content-Type: application/x-www-form-urlencoded' \
+--data-urlencode 'email=terry@gmail.com' \
+--data-urlencode 'contact=12345678' \
+--data-urlencode 'password=password' \
+--data-urlencode 'role=Customer' \
+--data-urlencode 'profile_pic_url=https://www.google.com/new.png' \
+--data-urlencode 'username=Terry Tang'
+
+curl --location --request GET 'localhost:8080/users/1'
+
+curl --location --request POST 'localhost:8080/airport' \
+--header 'Content-Type: application/x-www-form-urlencoded' \
+--data-urlencode 'name=Changi Airport' \
+--data-urlencode 'country=Singapore' \
+--data-urlencode 'descriptionMain International Airport of Singapore'
+
+curl --location --request POST 'localhost:8080/airport' \
+--header 'Content-Type: application/x-www-form-urlencoded' \
+--data-urlencode 'name=Narita Airport' \
+--data-urlencode 'country=Japan' \
+--data-urlencode 'description=Airport of Japan'
+
+curl --location --request POST 'localhost:8080/airport' \
+--header 'Content-Type: application/x-www-form-urlencoded' \
+--data-urlencode 'name=San Francisco Airport' \
+--data-urlencode 'country=United States' \
+--data-urlencode 'description=Airport of United States'
+
+
+curl --location --request POST 'localhost:8080/airport' \
+--header 'Content-Type: application/x-www-form-urlencoded' \
+--data-urlencode 'name=A Airport' \
+--data-urlencode 'country=A' \
+--data-urlencode 'description=Airport A'
+
+
+curl --location --request POST 'localhost:8080/airport' \
+--header 'Content-Type: application/x-www-form-urlencoded' \
+--data-urlencode 'name=B Airport' \
+--data-urlencode 'country=B' \
+--data-urlencode 'description=Airport B'
+
+curl --location --request GET 'localhost:8080/airport'
+
+curl --location --request POST 'localhost:8080/flight' \
+--header 'Content-Type: application/x-www-form-urlencoded' \
+--data-urlencode 'flightCode=SP110' \
+--data-urlencode 'aircraft=BOEING 737' \
+--data-urlencode 'originAirport=1' \
+--data-urlencode 'destinationAirport=2' \
+--data-urlencode 'embarkDate=2022/12/22 08:20' \
+--data-urlencode 'travelTime=6 hours 50 mins' \
+--data-urlencode 'price=855.50'
+
+curl --location --request POST 'localhost:8080/flight' \
+--header 'Content-Type: application/x-www-form-urlencoded' \
+--data-urlencode 'flightCode=SP231' \
+--data-urlencode 'aircraft=BOEING 788' \
+--data-urlencode 'originAirport=1' \
+--data-urlencode 'destinationAirport=1=4' \
+--data-urlencode 'embarkDate=2022/12/22 08:20' \
+--data-urlencode 'travelTime=6 hours 50 mins' \
+--data-urlencode 'price=1100'
+
+curl --location --request POST 'localhost:8080/flight' \
+--header 'Content-Type: application/x-www-form-urlencoded' \
+--data-urlencode 'flightCode=SP230' \
+--data-urlencode 'aircraft=BOEING 787' \
+--data-urlencode 'originAirport=2' \
+--data-urlencode 'destinationAirport=3' \
+--data-urlencode 'embarkDate=2022/12/22 08:20' \
+--data-urlencode 'travelTime=6 hours 50 mins' \
+--data-urlencode 'price=1000'
+
+curl --location --request POST 'localhost:8080/flight' \
+--header 'Content-Type: application/x-www-form-urlencoded' \
+--data-urlencode 'flightCode=SP233' \
+--data-urlencode 'aircraft=BOEING 789' \
+--data-urlencode 'originAirport=4' \
+--data-urlencode 'destinationAirport=3' \
+--data-urlencode 'embarkDate=2022/12/22 08:20' \
+--data-urlencode 'travelTime=6 hours 50 mins' \
+--data-urlencode 'price=1200'
+
+curl --location --request POST 'localhost:8080/flight' \
+--header 'Content-Type: application/x-www-form-urlencoded' \
+--data-urlencode 'flightCode=SP234' \
+--data-urlencode 'aircraft=BOEING 780' \
+--data-urlencode 'originAirport=4' \
+--data-urlencode 'destinationAirport=2' \
+--data-urlencode 'embarkDate=2022/12/22 08:20' \
+--data-urlencode 'travelTime=6 hours 50 mins' \
+--data-urlencode 'price=1300'
+
+curl --location --request GET 'localhost:8080/flightDirect/1/2'
+
+curl --location --request POST 'localhost:8080/booking/1/1' \
+--header 'Content-Type: application/x-www-form-urlencoded' \
+--data-urlencode 'name=John Tan' \
+--data-urlencode 'passport=E1234555Z' \
+--data-urlencode 'nationality=Singaporean' \
+--data-urlencode 'age=20'
+
+curl --location --request DELETE 'localhost:8080/flight/5'
+
+curl --location --request GET 'localhost:8080/transfer/flight/1/3'
+
+curl --location --request POST 'localhost:8080/upload' \
+--form 'image=@"/home/water/Desktop/pwntilldawn/10.200.200.137/charlie.jpg"' \
+--form 'name="dog"'
+
+curl --location --request GET 'localhost:8080/uploads'
+
+curl --location --request GET 'localhost:8080/uploads/1'

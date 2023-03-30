@@ -1,0 +1,17 @@
+https://www.tutorialspoint.com/which-mysql-type-is-most-suitable-for-price-column
+
+https://stackoverflow.com/questions/47232187/express-json-vs-bodyparser-json
+https://stackoverflow.com/questions/55558402/what-is-the-meaning-of-bodyparser-urlencoded-extended-true-and-bodypar
+https://dev.to/nermineslimane/how-to-structure-your-express-and-nodejs-project-3bl
+https://stackoverflow.com/questions/50149166/calling-class-function-from-callback-function-calls-in-nodejs
+
+https://dev.mysql.com/doc/refman/5.6/en/innodb-parameters.html#sysvar_innodb_autoinc_lock_mode
+https://ypereirareis.github.io/blog/2016/03/22/mysql-insert-ignore-alternatives/
+https://stackoverflow.com/questions/3164505/mysql-insert-record-if-not-exists-in-table
+https://stackoverflow.com/questions/12652629/differences-between-foreign-key-and-constraint-foreign-key
+
+https://stackoverflow.com/questions/2726657/inner-join-vs-left-join-performance-in-sql-server
+https://dev.mysql.com/doc/refman/8.0/en/with.html
+https://stackoverflow.com/questions/14523855/store-images-in-file-system-and-use-mysql-to-index
+https://www.tutsmake.com/upload-image-in-mysql-db-using-node-js-express-multer/
+https://code.tutsplus.com/tutorials/file-upload-with-multer-in-node--cms-32088

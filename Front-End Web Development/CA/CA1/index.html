@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <title>Hoot hoot</title>
+      <meta name="description" content="The HTML5 Herald">
+      <meta name="author" content="SitePoint">
+      <link rel="shortcut icon" type="image/jpg" href="images/owl.ico"/>
+      <!--Cross Browser-->
+      <link href="https://unpkg.com/sanitize.css" rel="stylesheet"/>
+      <!--Cross Browser-->
+      <!--CSS/JS-->
+      <link rel="stylesheet" href="css/styles.css">
+      <script src="js/scroll.js"></script>
+      <script src="js/bulb.js"></script>
+      <!--CSS/JS-->
+      <!--Fonts-->
+      <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+      <!--Fonts-->
+   </head>
+   <body>
+      <header id="navbar">
+         <nav id="header-top">
+            <img src="images/off.png" alt="bulb" width=30 class="bulb" id="bulb">
+            <input type="checkbox" name="checkbox" class="switch" id="switch" onclick="switchTheme()"> <!-- Dark/Light mode toggle -->
+            <section id="searchBar">
+               <a href="form.html" id="formButton"><i class="fa fa-envelope"></i></a> <!-- Button for form.html -->
+               <input type="text" id="search" placeholder="Search">
+               <button type="submit" onClick="find()"><i class="fa fa-search"></i></button> <!-- Use for highlighting text in specific area-->
+            </section>
+         </nav>
+         <nav id="header-bottom">
+            <a href="index.html" id="logo"></a>
+            <h1 id="logoName">Hoot Hoot</h1> <!-- Name next to logo -->
+            <ul id="header-right">  <!-- Navigation bar -->
+               <li><a href="index.html">Home</a></li>
+               <li><a href="past.html">My Past</a></li>
+               <li><a href="poly.html">Poly Life</a></li>
+               <li><a href="career.html">Career Prospect</a></li>
+            </ul>
+         </nav>
+      </header>
+      <main>
+         <article class="dark-section">
+            <h1 id="welcome">WELCOME <br> TO MY BLOG!</h1>
+            <p id="welcome-intro">
+               Hi! I'm s.<br>Click on  <a href="past.html">My Past</a> or<br> scroll down to learn more about me as a person!
+            </p>
+            <figure class="arrow bounce">
+               &#x25bc;
+            </figure>
+         </article>
+         <article class="light-section">
+            <h1>Interests</h1>
+            <h2>My Addiction to Chess</h2>
+			<figure>
+            <img src="images/chess.jpg" alt="chess" class="chess" width=200 style="float:right;">
+			</figure>
+            <p>
+               Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            </p>
+            <h2 style="text-align:right;">My Passion for Learning IT</h2>
+			<figure>
+            <iframe src="https://www.redditmedia.com/r/ProgrammerHumor/comments/kbmi2v/when_your_code_works_but_has_tons_of_security/?ref_source=embed&amp;ref=share&amp;embed=true&amp;theme=dark" sandbox="allow-scripts allow-same-origin allow-popups" style="border: none;float:right;" height="527" width="640"></iframe>
+			</figure>
+            <p>
+               Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            </p>
+            <h2>My go-to for boredom</h2>
+            <p>
+               I browse a lot of reddit. <i style="font-size:20px;color:red;background:white;border-radius: 50%;" class="fa">&#xf1a1;</i><br>
+			   This is my collection of unique cat pictures:
+            </p>
+			<figure id="grid-container-images">
+            <iframe id="cat1" src="https://www.redditmedia.com/r/AnimalsBeingDerps/comments/na6umn/dabby_tabby/?ref_source=embed&amp;ref=share&amp;embed=true&amp;theme=dark" sandbox="allow-scripts allow-same-origin allow-popups" style="border: none;width:100%;" height="600"></iframe>
+            <iframe id="cat2" src="https://www.redditmedia.com/r/cats/comments/nm2hcx/this_cat_hates_salad_and_possibly_mondays/?ref_source=embed&amp;ref=share&amp;embed=true&amp;theme=dark" sandbox="allow-scripts allow-same-origin allow-popups" style="border: none;width:100%;" height="600"></iframe>
+            <iframe id="cat3" src="https://www.redditmedia.com/r/AnimalsBeingDerps/comments/mwm516/this_last_second_photo_i_just_took_of_my_cat/?ref_source=embed&amp;ref=share&amp;embed=true&amp;theme=dark" sandbox="allow-scripts allow-same-origin allow-popups" style="border: none;width:100%;" height="600"></iframe>
+			<iframe id="cat4" src="https://www.redditmedia.com/r/cats/comments/kc0qxp/bought_a_whole_studio_set_up_for_one_purpose_only/?ref_source=embed&amp;ref=share&amp;embed=true&amp;theme=dark" sandbox="allow-scripts allow-same-origin allow-popups" style="border: none;width:100%;" height="600"></iframe>
+			<iframe id="cat5" src="https://www.redditmedia.com/r/cats/comments/mtglim/to_surprise_a_cat/?ref_source=embed&amp;ref=share&amp;embed=true&amp;theme=dark" sandbox="allow-scripts allow-same-origin allow-popups" style="border: none;width:100%;" height="600"></iframe>
+			<iframe id="cat6" src="https://www.redditmedia.com/r/cats/comments/g84r73/learning_to_knit_while_in_quarantine/?ref_source=embed&amp;ref=share&amp;embed=true&amp;theme=dark" sandbox="allow-scripts allow-same-origin allow-popups" style="border: none;width:100%;" height="600"></iframe>
+			</figure>
+         </article>
+         <article class="dark-section" style="text-align:center;">
+            <h1>Values</h1>
+            <h2>s</h2>
+            <p>
+               Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            </p>
+            <h2>s</h2>
+            <p>
+               Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            </p>
+            <h2>s</h2>
+            <p>
+               Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            </p>
+            &#129383;
+         </article>
+         <article class="light-section">
+            <h1>Personality</h1>
+            <p style="text-align:center;">
+               Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+            </p>
+         </article>
+      </main>
+      <footer>
+         <section id="social">
+            <h1>Stay connected</h1>
+            <p>Join to receive blog updates and tips.</p>
+            <input type="text" placeholder="Email Address..">
+            <button type="submit">Sign-Up</button>
+            <section id="socialMedia">
+               <a href="#" class="fa fa-reddit" style="color:red;"></a>
+               <a href="#" class="fa fa-twitter" style="color:#55ACEE;"></a>
+               <a href="#" class="fa fa-youtube" style="color:red;"></a>
+               <a href="#" class="fa fa-github" style="color:black;"></a>
+            </section>
+         </section>
+         <section id="footerDesc"> <!-- Description of website -->
+            <h1>Hoot Hoot</h1>
+            <p>Hoot Hoot was designed to inspire any cybersecurity student and guide their way through the different cybersecurity career sector.</p>
+         </section>
+         <nav id="footerNav">
+            <h1>Navigate</h1>
+            <ul id="footerNavLeft">
+               <li><a href="index.html">Home <i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+               <li><a href="past.html">My Past <i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+               <li><a href="poly.html">Poly Life <i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+            </ul>
+            <ul id="footerNavRight">
+               <li><a href="career.html">Career Prospect <i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+               <li><a href="form.html">Form <i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+            </ul>
+         </nav>
+         <section id="footerBottom">
+            <ul>
+               <li><a href="#tc.html">Privacy Policy</a></li>
+               <li><a href="#">Sitemap</a></li>
+               <li><a href="#reference">References</a></li>
+               <li>&copy; 2021 Hoot Hoot</li>
+            </ul>
+         </section>
+         <section id="reference">
+            <section class="popup">
+               <h2>Image References</h2>
+               <a id="close" href="#">&times;</a>
+               <ol id="referenceList">
+                  <li>https://unsplash.com/photos/7MgsXgMpQak - woodTexture.jpg</li>
+				  <li>https://unsplash.com/photos/BYPMtjYMEyk - Switzerland Mountain</li>
+                  <li>https://unsplash.com/photos/ueJJlc4Mclk - owl.png</li>
+                  <li>https://unsplash.com/photos/G7qObqWnCIA - featherTexture.jpg</li>
+                  <li>https://imgur.com/user/sebgames51 - owl2.jpg</li>
+                  <li>https://codepen.io/ahmadbassamemran/pen/yLBXBmy - day.png/night.png</li>
+               </ol>
+            </section>
+         </section>
+      </footer>
+   </body>
+</html>

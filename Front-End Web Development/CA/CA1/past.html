@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <title>Hoot hoot</title>
+      <meta name="description" content="The HTML5 Herald">
+      <meta name="author" content="SitePoint">
+      <link rel="shortcut icon" type="image/jpg" href="images/owl.ico"/>
+      <!--Cross Browser-->
+      <link href="https://unpkg.com/sanitize.css" rel="stylesheet"/>
+      <!--Cross Browser-->
+      <!--CSS/JS-->
+      <link rel="stylesheet" href="css/styles.css">
+      <script src="js/scroll.js"></script>
+      <script src="js/bulb.js"></script>
+      <!--CSS/JS-->
+      <!--Fonts-->
+      <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+      <!--Fonts-->
+   </head>
+   <body>
+      <header id="navbar">
+         <nav id="header-top">
+            <img src="images/off.png" alt="bulb" width=30 class="bulb" id="bulb">
+            <input type="checkbox" name="checkbox" class="switch" id="switch" onclick="switchTheme()"> <!-- Dark/Light mode toggle -->
+            <section id="searchBar">
+               <a href="form.html" id="formButton"><i class="fa fa-envelope"></i></a> <!-- Button for form.html -->
+               <input type="text" id="search" placeholder="Search">
+               <button type="submit" onClick="find()"><i class="fa fa-search"></i></button> <!-- Use for highlighting text in specific area-->
+            </section>
+         </nav>
+         <nav id="header-bottom">
+            <a href="index.html" id="logo"></a>
+            <h1 id="logoName">Hoot Hoot</h1> <!-- Name next to logo -->
+            <ul id="header-right">  <!-- Navigation bar -->
+               <li><a href="index.html">Home</a></li>
+               <li><a href="past.html">My Past</a></li>
+               <li><a href="poly.html">Poly Life</a></li>
+               <li><a href="career.html">Career Prospect</a></li>
+            </ul>
+         </nav>
+      </header>
+      <main>
+         <article class="dark-section" style="text-align:center;">
+            <h1>Education</h1>
+            <h2>Singapore Polytechnic</h2>
+            <p>Diploma in Infocomm Security Management<br>(Currently)</p>
+         </article>
+         <article class="light-section">
+            <h1>Story</h1>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</P>
+			<figure style="display:table;margin: 0 auto;">
+			<img src="images/medal.jpeg" width="300" alt="WSS medal">
+			</figure>
+         </article>
+      </main>
+      <footer>
+         <section id="social">
+            <h1>Stay connected</h1>
+            <p>Join to receive blog updates and tips.</p>
+            <input type="text" placeholder="Email Address..">
+            <button type="submit">Sign-Up</button>
+            <section id="socialMedia">
+               <a href="#" class="fa fa-reddit" style="color:red;"></a>
+               <a href="#" class="fa fa-twitter" style="color:#55ACEE;"></a>
+               <a href="#" class="fa fa-youtube" style="color:red;"></a>
+               <a href="#" class="fa fa-github" style="color:black;"></a>
+            </section>
+         </section>
+         <section id="footerDesc"> <!-- Description of website -->
+            <h1>Hoot Hoot</h1>
+            <p>Hoot Hoot was designed to inspire any cybersecurity student and guide their way through the different cybersecurity career sector.</p>
+         </section>
+         <nav id="footerNav">
+            <h1>Navigate</h1>
+            <ul id="footerNavLeft">
+               <li><a href="index.html">Home <i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+               <li><a href="past.html">My Past <i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+               <li><a href="poly.html">Poly Life <i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+            </ul>
+            <ul id="footerNavRight">
+               <li><a href="career.html">Career Prospect <i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+               <li><a href="form.html">Form <i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+            </ul>
+         </nav>
+         <section id="footerBottom">
+            <ul>
+               <li><a href="#tc.html">Privacy Policy</a></li>
+               <li><a href="#">Sitemap</a></li>
+			   <li><a href="#reference">References</a></li>
+               <li>&copy; 2021 Hoot Hoot</li>
+            </ul>
+         </section>
+         <section id="reference">
+            <section class="popup">
+               <h2>Image References</h2>
+               <ol id="referenceList">
+                  <li>https://unsplash.com/photos/7MgsXgMpQak - woodTexture.jpg</li>
+				  <li>https://unsplash.com/photos/BYPMtjYMEyk - Switzerland Mountain</li>
+                  <li>https://unsplash.com/photos/ueJJlc4Mclk - owl.png</li>
+                  <li>https://unsplash.com/photos/G7qObqWnCIA - featherTexture.jpg</li>
+                  <li>https://imgur.com/user/sebgames51 - owl2.jpg</li>
+                  <li>https://codepen.io/ahmadbassamemran/pen/yLBXBmy - day.png/night.png</li>
+               </ol>
+            </section>
+         </section>
+      </footer>
+   </body>
+</html>

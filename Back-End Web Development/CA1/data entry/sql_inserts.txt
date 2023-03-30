@@ -1,0 +1,13 @@
+INSERT INTO SP_AIR.user (username, email, contact, password, role, profile_pic_url) VALUES ('Terry Tan', 'terry@gmail.com', '912234567', 'password', 'Customer', 'https://www.abc.com/terry.jpg');
+INSERT INTO SP_AIR.user (username, email, contact, password, role, profile_pic_url) VALUES ('David Tan', 'david@gmail.com', '87654321', 'qwerty', 'Customer', 'https://www.google.com/c4.png');
+INSERT INTO SP_AIR.airport (name, country, description) VALUES ('Changi Airport', 'Singapore', 'Main International Airport of Singapore');
+INSERT INTO SP_AIR.airport (name, country, description) VALUES ('Narita Airport', 'Japan', 'Airport of Japan');
+INSERT INTO SP_AIR.airport (name, country, description) VALUES ('San Francisco Airport', 'United States', 'Airport of United States');
+INSERT INTO SP_AIR.airport (name, country, description) VALUES ('A Airport', 'A', 'A');
+INSERT INTO SP_AIR.airport (name, country, description) VALUES ('B Airport', 'B', 'B');
+INSERT INTO SP_AIR.flight (flightCode, aircraft, originAirport, destinationAirport, embarkDate, travelTime, price) VALUES ('SP110', 'BOEING 737', '1', '2', '2022/12/22 08:20', '6 hours 50 mins', '855.50');
+INSERT INTO SP_AIR.flight (flightCode, aircraft, originAirport, destinationAirport, embarkDate, travelTime, price) VALUES ('SP231', 'BOEING 788', '1', '4', '2022/12/22 08:22', '6 hours 52 mins', '1100');
+INSERT INTO SP_AIR.flight (flightCode, aircraft, originAirport, destinationAirport, embarkDate, travelTime, price) VALUES ('SP230', 'BOEING 787', '2', '3', '2022/12/22 08:21', '6 hours 51 mins', '1000');
+INSERT INTO SP_AIR.flight (flightCode, aircraft, originAirport, destinationAirport, embarkDate, travelTime, price) VALUES ('SP233', 'BOEING 789', '4', '3', '2022/12/22 08:23', '6 hours 53 mins', '1200');
+INSERT INTO SP_AIR.flight (flightCode, aircraft, originAirport, destinationAirport, embarkDate, travelTime, price) VALUES ('SP234', 'BOEING 780', '4', '2', '2022/12/22 08:24', '6 hours 54 mins', '1300');
+INSERT INTO SP_AIR.booking (name, passport, nationality, age, fk_userId, fk_flightId) VALUES ('John Tan', 'E1234555Z', 'E1234555Z', '20', '1', '1');

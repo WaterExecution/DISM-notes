@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+<table>
+  <tr>
+    <th></th>
+    <th>Lesson Date</th>
+  </tr>
+  {% for date in dates %}
+  <tr>
+    <td>{{ loop.index }}</td>
+    <td><a href="/lesson/{{ date[0] }}">{{ date[1] }}</a></td>
+  </tr>
+  {% endfor %}
+</table>
+
+</body>
+</html>

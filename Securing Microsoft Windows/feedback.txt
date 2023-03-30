@@ -1,0 +1,1 @@
+Make sure 1 action = 1 log

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+  <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous">
+  </script>
+  <script>
+    $(document).ready(function () {
+    var button = document.querySelectorAll('input[type=radio]');
+    var buttons = [];
+    for(var i = 0; i < button.length; i++){
+        if(button[i].checked){
+            buttons.push(button[i].value);
+        }
+      }
+    });
+  </script>
+</head>
+<body>
+<form action="/attendance/{{ lessonid }}" method="post">
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Student ID</th>
+      <th>Attendance</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for student in students %}
+        {% if student[3] == "P" %}
+    <tr>
+      <td>{{ loop.index }}</td>
+      <td>{{ student[0] }}</td>
+      <td>{{ student[1] }}</td>
+      <td>{{ student[2] }}</td>
+      <td>
+          <input type="radio" name="attendance{{ loop.index }}" value="Present" checked="checked">
+          <label for="Present">P</label><br>
+          <input type="radio" name="attendance{{ loop.index }}" value="Absent">
+          <label for="Absent">A</label>
+      </td>
+    </tr>
+        {% else %}
+    <tr>
+      <td>{{ loop.index }}</td>
+      <td>{{ student[0] }}</td>
+      <td>{{ student[1] }}</td>
+      <td>{{ student[2] }}</td>
+      <td>
+        <input type="radio" name="attendance{{ loop.index }}" value="Present">
+        <label for="Present">P</label><br>
+        <input type="radio" name="attendance{{ loop.index }}" value="Absent" checked="checked">
+        <label for="Absent">A</label>
+      </td>
+    </tr>
+        {% endif %}
+    {% endfor %}
+  </tbody>
+  <tfoot>
+    <tr>
+      <td colspan = '100%'><input type="submit" class="submit" value="Submit"></td>
+    </tr>
+  </tfoot>
+</table>
+</form>
+</body>
+</html>

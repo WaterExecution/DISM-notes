@@ -1,0 +1,1186 @@
+@font-face
+{
+    font-family: 'Neue Haas Unica';
+    font-weight: 700;
+    font-style: normal;
+
+    src: local('Neue Haas Unica Bold'), local('Neue-Haas-Unica-Bold'), url('NeueHaasUnica-Bold.woff2') format('woff2'), url('NeueHaasUnica-Bold.woff') format('woff'), url('NeueHaasUnica-Bold.ttf') format('truetype');
+}
+
+/************************************/
+/*                                  */
+/*           Custom Scroll          */
+/*                                  */
+/************************************/
+
+::-webkit-scrollbar
+{
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb
+{
+    border: 2px solid gray;
+    border-radius: 25px;
+    background-color: gray;
+}
+
+::-webkit-scrollbar-track
+{
+    background-color: transparent;
+}
+
+/************************************/
+/*                                  */
+/*           Custom Scroll          */
+/*                                  */
+/************************************/
+
+/************************************/
+/*                                  */
+/*           Color Swap             */
+/*                                  */
+/************************************/
+
+:root
+{
+    /* Dark Theme */
+    --bg-color: #141d2b;        /* Bluish black */
+    --primary-color: #1a2332;   /* Lighter color of BG */
+    --secondary-color: #111927; /* Darker color of BG */
+    --font-color: #a4b1cd;      /* Gray */
+    --heading-color: #9fef00;   /* Green */
+    --opposite-color: #fff;     /* White */
+    --header-color: #111927;	/* Darker color of BG */
+    --logo: transparent;		/* Logo Border Color */
+    --brightness: .7;			/* Images and Videos brightness */
+}
+
+[data-theme='light']
+{
+    --bg-color: #fff;           /* White */
+    --primary-color: #eaeaea;   /* Light Gray */
+    --secondary-color: #bfbfbf; /* Gray */
+    --font-color: #000;         /* Black */
+    --heading-color: #9fef00;   /* Green */
+    --opposite-color: #000;     /* Black */
+    --hover-color: #eaeaea;     /* Light Gray */
+    --header-color: url('../images/woodTexture.jpg');
+    --logo: black;              /* Logo Border Color */
+    --brightness: 1;            /* Images and Videos brightness */
+}
+
+
+/************************************/
+/*                                  */
+/*           Color Swap             */
+/*                                  */
+/************************************/
+
+/************************************/
+/*                                  */
+/*             Global               */
+/*                                  */
+/************************************/
+
+figure
+{
+    opacity: var(--brightness);
+}
+
+/*Prevents white background from showing from fast scrolling*/
+body
+{
+    background-color: var(--bg-color);
+}
+
+a
+{
+    text-decoration: underline;
+
+    color: var(--font-color);
+}
+
+p > a:hover
+{
+    color: var(--opposite-color);
+    background-color: var(--hover-color);
+}
+
+/************************************/
+/*                                  */
+/*             Global               */
+/*                                  */
+/************************************/
+
+/***********************************/
+/*                                 */
+/*                                 */
+/*                                 */
+/*             Header              */
+/*                                 */
+/*                                 */
+/*                                 */
+/***********************************/
+
+#navbar
+{
+    position: fixed;       /* Fixed Top */
+    z-index: 100;         /* Always on top */
+    top: 0;
+
+    width: 100%;
+    height: 149.4px;
+
+    transition: top .3s; /* Transition for scrolling*/
+}
+
+#header-top
+{
+    height: 50px;
+
+    background-color: var(--header-color); /* Dark */
+    background-image: var(--header-color); /* Wood Texture */
+}
+
+
+/************************************/
+/*                                  */
+/*           Toggle Switch          */
+/*                                  */
+/************************************/
+
+.bulb
+{
+    float: left;
+
+    margin-left: 14%;
+    padding-top: 7px;
+}
+
+
+/* Set default image to night */
+
+.switch
+{
+    position: relative;
+
+    overflow: hidden;
+
+    width: 60px;
+    height: 30px;
+    margin-top: 10px;
+
+    cursor: pointer;
+    transition: background-image .3s ease-in-out;
+
+    border-radius: 25px;
+    background-image: url('../images/night.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: inset 0 0 2px rgba(255, 255, 255, .7);
+
+    -webkit-appearance: none;
+}
+
+
+/* User click button slider change to day image */
+
+.switch:checked
+{
+    transition: background-image .3s ease-in-out;
+
+    background-image: url('../images/day.png');
+    background-size: cover;
+}
+
+
+/* Move button to left after click */
+
+.switch:after
+{
+    position: absolute;
+    top: 2px;
+    left: 2px;
+
+    width: 26px;
+    height: 26px;
+
+    content: '';
+    transform: translateX(0px);
+    animation: off .3s forwards cubic-bezier(.8, .5, .2, 1.4);
+
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: inset 5px -5px 4px rgba(53, 53, 53, .3);
+}
+
+@keyframes off
+{
+    0%
+    {
+        width: 26px;
+
+        transform: translateX(30px);
+    }
+    50%
+    {
+        width: 30px;
+
+        border-radius: 25px;
+    }
+    100%
+    {
+        width: 26px;
+
+        transform: translateX(0px);
+    }
+}
+
+
+/* Move button to right after click */
+
+.switch:checked:after
+{
+    animation: on .3s forwards cubic-bezier(.8, .5, .2, 1.4);
+
+    box-shadow: inset -5px -5px 4px rgba(53, 53, 53, .3);
+}
+
+@keyframes on
+{
+    0%
+    {
+        width: 26px;
+
+        transform: translateX(0px);
+    }
+    50%
+    {
+        width: 30px;
+
+        border-radius: 25px;
+    }
+    100%
+    {
+        width: 26px;
+
+        transform: translateX(30px);
+    }
+}
+
+
+/************************************/
+/*                                  */
+/*           Toggle Switch          */
+/*                                  */
+/************************************/
+
+
+/************************************/
+/*                                  */
+/*            Search bar            */
+/*                                  */
+/************************************/
+
+#formButton
+{
+    float: left;
+
+    margin-right: 10px;
+    padding: 6px 9.5px 6px 10.5px;
+
+    color: white;
+    border: 2px solid white;
+    border-radius: 100%;
+}
+
+#searchBar
+{
+    float: right;
+
+    margin-top: 7px;
+    margin-right: 14%;
+}
+
+#header-top input[type=text]
+{
+    font-size: 20px;
+
+    float: left;
+
+    padding: 5px;
+
+    color: var(--font-color);
+    border: 2px solid var(--opposite-color);
+    background-color: var(--primary-color);
+}
+
+#header-top input[type=text]:focus
+{
+    outline: 0;
+}
+
+#header-top button
+{
+    font-size: 20px;
+
+    float: left;
+
+    margin-left: -2px;
+    padding: 5px 10px;
+
+    cursor: pointer;
+
+    border: 2px solid var(--opposite-color);
+    background: #ddd;
+}
+
+/* For highlighting text */
+span
+{
+    background-color: #ff0;
+}
+
+
+/************************************/
+/*                                  */
+/*            Search bar            */
+/*                                  */
+/************************************/
+
+
+/************************************/
+/*                                  */
+/*              Navbar              */
+/*                                  */
+/************************************/
+
+#header-bottom
+{
+    height: 99.4px;
+
+    background-color: var(--bg-color);
+}
+
+#logo
+{
+    position: absolute;
+
+    width: 432px;
+    height: 447px;
+    /*-((x-x*y)/2)*/
+    margin-top: calc(-178.8px + 5px);
+    margin-left: calc(-172.8px + 14%);
+
+    transform: scale(.2, .2); /* Scale image to 20% (86.4 x 89.4) */
+
+    background-image: url('../images/owl.png');
+}
+
+#logoName
+{
+    font-family: 'Neue Haas Unica';
+    font-size: 30px;
+
+    position: absolute;
+
+    margin-top: 27.1px;/* Center text to image */
+    margin-left: calc(14% + 88.4px);/* Next to logo */
+
+    color: transparent;
+    background-image: url(../images/feather.jpg);
+    -webkit-background-clip: text;
+
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: var(--logo);
+}
+
+#header-right
+{
+    float: right;
+
+    height: 99.4px;
+    margin: 0;
+    padding-right: 14%;
+
+    list-style-type: none;
+}
+
+#header-right li
+{
+    float: left;
+
+    padding-top: 36px;
+
+    /* Center Text */
+}
+
+#header-right li a
+{
+    font-family: 'Neue Haas Unica';
+    font-size: 18px;
+
+    padding: 12px 25px;/* Spacing between nav links */
+
+    text-decoration: none;
+
+    color: var(--font-color);
+}
+
+#header-right li a:hover
+{
+    color: var(--opposite-color);
+    background-color: var(--hover-color);
+}
+
+/************************************/
+/*                                  */
+/*              Navbar              */
+/*                                  */
+/************************************/
+
+
+/***********************************/
+/*                                 */
+/*                                 */
+/*                                 */
+/*             Header              */
+/*                                 */
+/*                                 */
+/*                                 */
+/***********************************/
+
+
+/***********************************/
+/*                                 */
+/*                                 */
+/*                                 */
+/*              Main               */
+/*                                 */
+/*                                 */
+/*                                 */
+/***********************************/
+/* space for navbar */
+main
+{
+    padding-top: 149.4px;
+}
+
+.light-section
+{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 20px;
+
+    padding: 20px 14% 100px 14%;
+
+    color: var(--font-color);
+    background-color: var(--primary-color);
+}
+
+.dark-section
+{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 20px;
+
+    padding: 20px 14% 100px 14%;
+
+    color: var(--font-color);
+    background-color: var(--bg-color);
+}
+
+
+/************************************/
+/*                                  */
+/*           Index.html             */
+/*                                  */
+/************************************/
+
+main > article > h1:not(#welcome)
+{
+    font-family: 'Neue Haas Unica';
+    font-size: 40px;
+
+    display: table;
+
+    margin: 5px auto;
+    padding: 0 10px 0;
+
+    color: var(--heading-color);
+    border: 2px solid var(--opposite-color);
+    border-radius: 25px;
+    background-color: var(--background-color);
+}
+
+main > article > h2
+{
+    font-size: 30px;
+
+    padding-bottom: 10px;
+
+    text-decoration: underline;
+}
+
+
+/* Welcome Header */
+
+#welcome
+{
+    font-family: 'Neue Haas Unica';
+    font-size: 80px;
+
+    padding-top: 150px;
+    /* Center to be eyecatching */
+
+    text-align: center;
+
+    color: var(--opposite-color);
+}
+
+#welcome-intro
+{
+    padding-right: 14%;
+    padding-left: 14%;
+
+    text-align: center;
+}
+
+.arrow
+{
+    font-size: 30px;
+
+    width: 100px;
+    margin: 50px auto 0;
+    padding-bottom: 300px;
+
+    text-align: center;
+
+    color: var(--font-color);
+}
+
+.bounce
+{
+    -webkit-animation: bounce 2s infinite;
+       -moz-animation: bounce 2s infinite;
+            animation: bounce 2s infinite;
+}
+
+@keyframes bounce
+{
+    0%,
+    20%,
+    50%,
+    80%,
+    100%
+    {
+        transform: translateY(0);
+    }
+    40%
+    {
+        transform: translateY(-30px);
+    }
+    60%
+    {
+        transform: translateY(-15px);
+    }
+}
+
+#grid-container-images
+{
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px 10px;
+    grid-template-areas: 'cat1 cat2 cat3'
+    'cat4 cat5 cat6';
+}
+#cat1
+{
+    grid-area: cat1;
+}
+#cat2
+{
+    grid-area: cat2;
+}
+#cat3
+{
+    grid-area: cat3;
+}
+#cat4
+{
+    grid-area: cat4;
+}
+#cat5
+{
+    grid-area: cat5;
+}
+#cat6
+{
+    grid-area: cat6;
+}
+
+/************************************/
+/*                                  */
+/*           Index.html             */
+/*                                  */
+/************************************/
+
+
+/************************************/
+/*                                  */
+/*           career.html            */
+/*                                  */
+/************************************/
+
+#searchIcon
+{
+    font-size: 30px;
+
+    margin-right: 20px;
+}
+
+.careerTable
+{
+    overflow: hidden;
+
+    min-width: 400px;
+    margin: 25px 0;
+
+    border-collapse: collapse;
+
+    border-radius: 20px 20px 0 0;
+    box-shadow: rgba(0, 0, 0, .35) 0 5px 15px;
+}
+
+/* Header */
+.careerTable thead tr
+{
+    color: white;
+    background-color: #112959; /* Blue */
+}
+
+.careerTable tbody tr
+{
+    height: 100px;
+
+    background-color: var(--primary-color);
+}
+
+.careerTable tbody tr:nth-of-type(even)
+{
+    background-color: var(--secondary-color);
+}
+
+.careerTable th,
+td
+{
+    padding: 12px 15px;
+}
+
+.careerTable .tableDescription
+{
+    font-family: 'Neue Haas Unica';
+    font-size: 40px;
+
+    text-align: center;
+    vertical-align: center;
+
+    border-color: inherit;
+}
+
+.careerTable .rank
+{
+    font-size: 30px;
+
+    text-align: center;
+    vertical-align: center;
+}
+
+.careerTable .career
+{
+    font-size: 30px;
+
+    text-align: center;
+    vertical-align: center;
+}
+
+.careerTable .courses
+{
+    font-size: 20px;
+
+    vertical-align: center;
+
+    border-color: inherit;
+}
+
+
+/************************************/
+/*                                  */
+/*           career.html            */
+/*                                  */
+/************************************/
+
+
+/************************************/
+/*                                  */
+/*            form.html             */
+/*                                  */
+/************************************/
+
+
+/************************************/
+/*                                  */
+/*               FAQ                */
+/*                                  */
+/************************************/
+
+#accordion
+{
+    background-color: var(--secondary-color);
+    box-shadow: rgba(0, 0, 0, .35) 0 5px 15px;
+}
+
+.accordionList
+{
+    font-family: 'Neue Haas Unica';
+    font-size: 20px;
+
+    width: calc(100% - 10px);
+    max-height: 66px;
+    margin: 5px;
+    padding: 18px;
+
+    cursor: pointer;
+    text-align: left;
+    vertical-align: center;
+
+    color: var(--font-color);
+    border: none;
+    background-color: var(--secondary-color);
+}
+
+.accordionList:hover
+{
+    background-color: var(--primary-color);
+}
+
+.accordionList:after
+{
+    font-family: 'Neue Haas Unica', 'FontAwesome';
+    font-size: 20px;
+
+    float: right;
+
+    content: '\f078';
+    vertical-align: center;
+
+    color: var(--font-color);
+}
+
+.active:after
+{
+    font-family: 'FontAwesome';
+
+    content: '\f077';
+    vertical-align: center;
+}
+
+.panel
+{
+    overflow: hidden;
+
+    max-height: 0;
+
+    background-color: var(--bg-color);
+}
+
+
+/************************************/
+/*                                  */
+/*               FAQ                */
+/*                                  */
+/************************************/
+
+
+/************************************/
+/*                                  */
+/*              Forms               */
+/*                                  */
+/************************************/
+
+#grid-container
+{
+    display: grid;
+
+    width: 80%;
+    min-width: 840px;
+    margin: auto;
+    padding: 25px;
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 20px 20px;
+    grid-template-areas: 'Enquiry Enquiry' 'Name Surname' 'Email Email' 'Phone Phone' 'Comments Comments' 'Comments Comments' 'PDPA Newsletter';
+}
+
+#Enquiry
+{
+    grid-area: Enquiry;
+}
+
+#Name
+{
+    grid-area: Name;
+}
+
+#Surname
+{
+    grid-area: Surname;
+}
+
+#Email
+{
+    grid-area: Email;
+}
+
+#Phone
+{
+    grid-area: Phone;
+}
+
+#PDPA
+{
+    grid-area: PDPA;
+}
+
+#Comments
+{
+    height: 100px;
+    padding-top: 18px;
+
+    resize: none;
+
+    grid-area: Comments;
+}
+
+#Newsletter
+{
+    grid-area: Newsletter;
+}
+
+input[type=submit]
+{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 20px;
+
+    float: right;
+
+    width: 80px;
+    padding: 2px;
+
+    vertical-align: center;
+
+    color: var(--font-color);
+    border: transparent solid;
+    border-radius: 50px;
+    background-color: var(--secondary-color);
+}
+
+.formBox
+{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 20px;
+
+    height: 50px;
+    padding-right: 18px;
+    padding-left: 18px;
+
+    color: var(--font-color);
+    border: transparent solid;
+    border-radius: 3px;
+    background-color: var(--secondary-color);
+    box-shadow: rgba(0, 0, 0, .16) 0 3px 6px, rgba(0, 0, 0, .23) 0 3px 6px;
+}
+
+
+/************************************/
+/*                                  */
+/*              Forms               */
+/*                                  */
+/************************************/
+
+
+/************************************/
+/*                                  */
+/*            form.html             */
+/*                                  */
+/************************************/
+
+
+/***********************************/
+/*                                 */
+/*                                 */
+/*                                 */
+/*              Main               */
+/*                                 */
+/*                                 */
+/*                                 */
+/***********************************/
+
+/***********************************/
+/*                                 */
+/*                                 */
+/*                                 */
+/*             Footer              */
+/*                                 */
+/*                                 */
+/*                                 */
+/***********************************/
+
+footer
+{
+    background-color: var(--secondary-color);
+}
+
+#social
+{
+    font-family: 'Neue Haas Unica';
+
+    float: left;
+
+    width: 33%;
+    height: 200px;
+    padding-left: 14%;
+
+    color: var(--opposite-color);
+}
+
+#social p
+{
+    font-family: 'Quicksand', sans-serif;
+
+    padding-bottom: 20px;
+}
+
+#social input
+{
+    padding: 10px;
+}
+
+#social button
+{
+    font-family: 'Quicksand', sans-serif;
+
+    padding: 10px;
+
+    color: white;
+    border: transparent solid;
+    background-color: #112959;
+}
+
+#socialMedia a
+{
+    font-size: 40px;
+
+    width: 56px;
+    margin-top: 20px;
+    padding: 5px;
+
+    text-align: center;
+    text-decoration: none;
+
+    border: transparent solid;
+    border-radius: 50%;
+    background-color: white;
+}
+
+#socialMedia a:hover
+{
+    border: 3px solid var(--secondary-color);
+    background-color: white;
+}
+
+#footerDesc
+{
+    font-family: 'Neue Haas Unica';
+
+    float: left;
+
+    width: 34%;
+    height: 200px;
+
+    color: var(--opposite-color);
+}
+
+#footerDesc *
+{
+    padding: 0 100px;
+}
+
+#footerDesc p
+{
+    font-family: 'Quicksand', sans-serif;
+}
+
+#footerNav
+{
+    font-family: 'Neue Haas Unica';
+
+    float: left;
+
+    width: 33%;
+    height: 200px;
+
+    color: var(--opposite-color);
+}
+
+#footerNavLeft
+{
+    float: left;
+
+    width: 25%;
+    margin: 0;
+}
+
+#footerNavRight
+{
+    float: left;
+
+    width: 30%;
+    margin: 0;
+}
+
+#footerNav ul li
+{
+    padding-bottom: 10px;
+
+    list-style-type: none;
+}
+
+#footerNav ul li a
+{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+
+    text-decoration: none;
+
+    color: #52c4d1;
+}
+
+#footerBottom
+{
+    display: table;
+
+    margin: auto;
+    padding-top: 50px;
+}
+
+#footerBottom ul li
+{
+    font: 20px;
+    font-family: 'Neue Haas Unica';
+
+    float: left;
+
+    padding: 12px 25px 12px 25px;
+
+    list-style-type: none;
+
+    color: var(--opposite-color);
+}
+
+#footerBottom ul li a
+{
+    font-family: 'Neue Haas Unica';
+
+    text-decoration: none;
+
+    color: var(--opposite-color);
+}
+
+/************************************/
+/*                                  */
+/*            Reference             */
+/*                                  */
+/************************************/
+
+#reference
+{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    visibility: hidden;
+
+    transition: opacity 500ms;
+
+    opacity: 0;
+    background: rgba(0, 0, 0, .7);
+}
+#reference:target
+{
+    visibility: visible;
+
+    opacity: 1;
+}
+
+.popup
+{
+    position: relative;
+
+    width: 50%;
+    margin: 10% auto;
+    padding: 20px;
+
+    border-radius: 5px;
+    background: var(--bg-color);
+}
+
+.popup h2
+{
+    font-family: 'Neue Haas Unica';
+
+    margin-top: 0;
+
+    color: var(--font-color);
+}
+.popup #close
+{
+    font-size: 30px;
+
+    position: absolute;
+    top: 20px;
+    right: 30px;
+
+    transition: all 200ms;
+    text-decoration: none;
+
+    color: var(--font-color);
+}
+#referenceList
+{
+    font-family: 'Quicksand', 'sans-serif';
+
+    list-style-type: upper-roman;
+
+    color: var(--font-color);
+}
+/************************************/
+/*                                  */
+/*            Reference             */
+/*                                  */
+/************************************/
+
+/***********************************/
+/*                                 */
+/*                                 */
+/*                                 */
+/*             Footer              */
+/*                                 */
+/*                                 */
+/*                                 */
+/***********************************/

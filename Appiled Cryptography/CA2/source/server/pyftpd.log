@@ -1,0 +1,269 @@
+INFO:pyftpdlib:concurrency model: async
+INFO:pyftpdlib:masquerade (NAT) address: None
+INFO:pyftpdlib:passive ports: None
+INFO:pyftpdlib:>>> starting FTP server on 127.0.0.1:2121, pid=3797 <<<
+INFO:pyftpdlib:concurrency model: async
+INFO:pyftpdlib:masquerade (NAT) address: None
+INFO:pyftpdlib:passive ports: None
+INFO:pyftpdlib:>>> starting FTP server on 127.0.0.1:2121, pid=13376 <<<
+INFO:pyftpdlib:127.0.0.1:56411-[] FTP session opened (connect)
+INFO:pyftpdlib:127.0.0.1:56411-[camera1] USER 'camera1' logged in.
+INFO:pyftpdlib:127.0.0.1:56411-[camera1] STOR C:\Users\water\Desktop\Camera\source\server\data\camera1\1_2022_02_12_19_58_39.jpg completed=1 bytes=12287 seconds=0.0
+ERROR:pyftpdlib:unhandled exception in instance <DTPHandler(id=66409928, addr='127.0.0.1:56411', user='camera1', sending-file=<_io.BufferedWriter name='C:\\Users\\water\\Desktop\\Camera\\source\\server\\data\\camera1\\1_2022_02_12_19_58_39.jpg'>, bytes-trans=12287)>
+Traceback (most recent call last):
+  File "C:\Users\water\AppData\Local\Programs\Python\Python38-32\lib\asyncore.py", line 83, in read
+    obj.handle_read_event()
+  File "C:\Users\water\AppData\Local\Programs\Python\Python38-32\lib\site-packages\pyftpdlib\handlers.py", line 787, in handle_read
+    chunk = self.recv(self.ac_in_buffer_size)
+  File "C:\Users\water\AppData\Local\Programs\Python\Python38-32\lib\site-packages\pyftpdlib\ioloop.py", line 913, in recv
+    self.handle_close()
+  File "C:\Users\water\AppData\Local\Programs\Python\Python38-32\lib\site-packages\pyftpdlib\handlers.py", line 876, in handle_close
+    self.close()
+  File "C:\Users\water\AppData\Local\Programs\Python\Python38-32\lib\site-packages\pyftpdlib\handlers.py", line 907, in close
+    self.cmd_channel.on_file_received(filename)
+  File "server.py", line 55, in on_file_received
+    pubkeypath = 'public/' + pubkeypath.split("/")[-2] + '/camera.pub'
+IndexError: list index out of range
+INFO:pyftpdlib:127.0.0.1:56414-[] FTP session opened (connect)
+INFO:pyftpdlib:127.0.0.1:56414-[camera1] USER 'camera1' logged in.
+INFO:pyftpdlib:127.0.0.1:56414-[camera1] STOR C:\Users\water\Desktop\Camera\source\server\data\camera1\1_2022_02_12_19_58_41.jpg completed=1 bytes=12287 seconds=0.015
+ERROR:pyftpdlib:unhandled exception in instance <DTPHandler(id=66409760, addr='127.0.0.1:56414', user='camera1', sending-file=<_io.BufferedWriter name='C:\\Users\\water\\Desktop\\Camera\\source\\server\\data\\camera1\\1_2022_02_12_19_58_41.jpg'>, bytes-trans=12287)>
+Traceback (most recent call last):
+  File "C:\Users\water\AppData\Local\Programs\Python\Python38-32\lib\asyncore.py", line 83, in read
+    obj.handle_read_event()
+  File "C:\Users\water\AppData\Local\Programs\Python\Python38-32\lib\site-packages\pyftpdlib\handlers.py", line 787, in handle_read
+    chunk = self.recv(self.ac_in_buffer_size)
+  File "C:\Users\water\AppData\Local\Programs\Python\Python38-32\lib\site-packages\pyftpdlib\ioloop.py", line 913, in recv
+    self.handle_close()
+  File "C:\Users\water\AppData\Local\Programs\Python\Python38-32\lib\site-packages\pyftpdlib\handlers.py", line 876, in handle_close
+    self.close()
+  File "C:\Users\water\AppData\Local\Programs\Python\Python38-32\lib\site-packages\pyftpdlib\handlers.py", line 907, in close
+    self.cmd_channel.on_file_received(filename)
+  File "server.py", line 55, in on_file_received
+    pubkeypath = 'public/' + pubkeypath.split("/")[-2] + '/camera.pub'
+IndexError: list index out of range
+INFO:pyftpdlib:127.0.0.1:56417-[] FTP session opened (connect)
+INFO:pyftpdlib:127.0.0.1:56417-[camera1] USER 'camera1' logged in.
+INFO:pyftpdlib:127.0.0.1:56417-[camera1] STOR C:\Users\water\Desktop\Camera\source\server\data\camera1\1_2022_02_12_19_58_44.jpg completed=1 bytes=12287 seconds=0.0
+ERROR:pyftpdlib:unhandled exception in instance <DTPHandler(id=66410384, addr='127.0.0.1:56417', user='camera1', sending-file=<_io.BufferedWriter name='C:\\Users\\water\\Desktop\\Camera\\source\\server\\data\\camera1\\1_2022_02_12_19_58_44.jpg'>, bytes-trans=12287)>
+Traceback (most recent call last):
+  File "C:\Users\water\AppData\Local\Programs\Python\Python38-32\lib\asyncore.py", line 83, in read
+    obj.handle_read_event()
+  File "C:\Users\water\AppData\Local\Programs\Python\Python38-32\lib\site-packages\pyftpdlib\handlers.py", line 787, in handle_read
+    chunk = self.recv(self.ac_in_buffer_size)
+  File "C:\Users\water\AppData\Local\Programs\Python\Python38-32\lib\site-packages\pyftpdlib\ioloop.py", line 913, in recv
+    self.handle_close()
+  File "C:\Users\water\AppData\Local\Programs\Python\Python38-32\lib\site-packages\pyftpdlib\handlers.py", line 876, in handle_close
+    self.close()
+  File "C:\Users\water\AppData\Local\Programs\Python\Python38-32\lib\site-packages\pyftpdlib\handlers.py", line 907, in close
+    self.cmd_channel.on_file_received(filename)
+  File "server.py", line 55, in on_file_received
+    pubkeypath = 'public/' + pubkeypath.split("/")[-2] + '/camera.pub'
+IndexError: list index out of range
+INFO:pyftpdlib:127.0.0.1:56420-[] FTP session opened (connect)
+INFO:pyftpdlib:127.0.0.1:56420-[camera1] USER 'camera1' logged in.
+INFO:pyftpdlib:127.0.0.1:56420-[camera1] STOR C:\Users\water\Desktop\Camera\source\server\data\camera1\1_2022_02_12_19_58_45.jpg completed=1 bytes=12287 seconds=0.0
+ERROR:pyftpdlib:unhandled exception in instance <DTPHandler(id=66599736, addr='127.0.0.1:56420', user='camera1', sending-file=<_io.BufferedWriter name='C:\\Users\\water\\Desktop\\Camera\\source\\server\\data\\camera1\\1_2022_02_12_19_58_45.jpg'>, bytes-trans=12287)>
+Traceback (most recent call last):
+  File "C:\Users\water\AppData\Local\Programs\Python\Python38-32\lib\asyncore.py", line 83, in read
+    obj.handle_read_event()
+  File "C:\Users\water\AppData\Local\Programs\Python\Python38-32\lib\site-packages\pyftpdlib\handlers.py", line 787, in handle_read
+    chunk = self.recv(self.ac_in_buffer_size)
+  File "C:\Users\water\AppData\Local\Programs\Python\Python38-32\lib\site-packages\pyftpdlib\ioloop.py", line 913, in recv
+    self.handle_close()
+  File "C:\Users\water\AppData\Local\Programs\Python\Python38-32\lib\site-packages\pyftpdlib\handlers.py", line 876, in handle_close
+    self.close()
+  File "C:\Users\water\AppData\Local\Programs\Python\Python38-32\lib\site-packages\pyftpdlib\handlers.py", line 907, in close
+    self.cmd_channel.on_file_received(filename)
+  File "server.py", line 55, in on_file_received
+    pubkeypath = 'public/' + pubkeypath.split("/")[-2] + '/camera.pub'
+IndexError: list index out of range
+INFO:pyftpdlib:127.0.0.1:56423-[] FTP session opened (connect)
+INFO:pyftpdlib:127.0.0.1:56423-[camera1] USER 'camera1' logged in.
+INFO:pyftpdlib:127.0.0.1:56423-[camera1] STOR C:\Users\water\Desktop\Camera\source\server\data\camera1\1_2022_02_12_19_58_47.jpg completed=1 bytes=12287 seconds=0.0
+ERROR:pyftpdlib:unhandled exception in instance <DTPHandler(id=66600456, addr='127.0.0.1:56423', user='camera1', sending-file=<_io.BufferedWriter name='C:\\Users\\water\\Desktop\\Camera\\source\\server\\data\\camera1\\1_2022_02_12_19_58_47.jpg'>, bytes-trans=12287)>
+Traceback (most recent call last):
+  File "C:\Users\water\AppData\Local\Programs\Python\Python38-32\lib\asyncore.py", line 83, in read
+    obj.handle_read_event()
+  File "C:\Users\water\AppData\Local\Programs\Python\Python38-32\lib\site-packages\pyftpdlib\handlers.py", line 787, in handle_read
+    chunk = self.recv(self.ac_in_buffer_size)
+  File "C:\Users\water\AppData\Local\Programs\Python\Python38-32\lib\site-packages\pyftpdlib\ioloop.py", line 913, in recv
+    self.handle_close()
+  File "C:\Users\water\AppData\Local\Programs\Python\Python38-32\lib\site-packages\pyftpdlib\handlers.py", line 876, in handle_close
+    self.close()
+  File "C:\Users\water\AppData\Local\Programs\Python\Python38-32\lib\site-packages\pyftpdlib\handlers.py", line 907, in close
+    self.cmd_channel.on_file_received(filename)
+  File "server.py", line 55, in on_file_received
+    pubkeypath = 'public/' + pubkeypath.split("/")[-2] + '/camera.pub'
+IndexError: list index out of range
+INFO:pyftpdlib:127.0.0.1:56426-[] FTP session opened (connect)
+INFO:pyftpdlib:127.0.0.1:56426-[camera1] USER 'camera1' logged in.
+INFO:pyftpdlib:127.0.0.1:56426-[camera1] STOR C:\Users\water\Desktop\Camera\source\server\data\camera1\1_2022_02_12_19_58_49.jpg completed=1 bytes=12287 seconds=0.0
+ERROR:pyftpdlib:unhandled exception in instance <DTPHandler(id=66598296, addr='127.0.0.1:56426', user='camera1', sending-file=<_io.BufferedWriter name='C:\\Users\\water\\Desktop\\Camera\\source\\server\\data\\camera1\\1_2022_02_12_19_58_49.jpg'>, bytes-trans=12287)>
+Traceback (most recent call last):
+  File "C:\Users\water\AppData\Local\Programs\Python\Python38-32\lib\asyncore.py", line 83, in read
+    obj.handle_read_event()
+  File "C:\Users\water\AppData\Local\Programs\Python\Python38-32\lib\site-packages\pyftpdlib\handlers.py", line 787, in handle_read
+    chunk = self.recv(self.ac_in_buffer_size)
+  File "C:\Users\water\AppData\Local\Programs\Python\Python38-32\lib\site-packages\pyftpdlib\ioloop.py", line 913, in recv
+    self.handle_close()
+  File "C:\Users\water\AppData\Local\Programs\Python\Python38-32\lib\site-packages\pyftpdlib\handlers.py", line 876, in handle_close
+    self.close()
+  File "C:\Users\water\AppData\Local\Programs\Python\Python38-32\lib\site-packages\pyftpdlib\handlers.py", line 907, in close
+    self.cmd_channel.on_file_received(filename)
+  File "server.py", line 55, in on_file_received
+    pubkeypath = 'public/' + pubkeypath.split("/")[-2] + '/camera.pub'
+IndexError: list index out of range
+INFO:pyftpdlib:127.0.0.1:56429-[] FTP session opened (connect)
+INFO:pyftpdlib:127.0.0.1:56429-[camera1] USER 'camera1' logged in.
+INFO:pyftpdlib:127.0.0.1:56429-[camera1] STOR C:\Users\water\Desktop\Camera\source\server\data\camera1\1_2022_02_12_19_58_50.jpg completed=1 bytes=12287 seconds=0.0
+ERROR:pyftpdlib:unhandled exception in instance <DTPHandler(id=66600672, addr='127.0.0.1:56429', user='camera1', sending-file=<_io.BufferedWriter name='C:\\Users\\water\\Desktop\\Camera\\source\\server\\data\\camera1\\1_2022_02_12_19_58_50.jpg'>, bytes-trans=12287)>
+Traceback (most recent call last):
+  File "C:\Users\water\AppData\Local\Programs\Python\Python38-32\lib\asyncore.py", line 83, in read
+    obj.handle_read_event()
+  File "C:\Users\water\AppData\Local\Programs\Python\Python38-32\lib\site-packages\pyftpdlib\handlers.py", line 787, in handle_read
+    chunk = self.recv(self.ac_in_buffer_size)
+  File "C:\Users\water\AppData\Local\Programs\Python\Python38-32\lib\site-packages\pyftpdlib\ioloop.py", line 913, in recv
+    self.handle_close()
+  File "C:\Users\water\AppData\Local\Programs\Python\Python38-32\lib\site-packages\pyftpdlib\handlers.py", line 876, in handle_close
+    self.close()
+  File "C:\Users\water\AppData\Local\Programs\Python\Python38-32\lib\site-packages\pyftpdlib\handlers.py", line 907, in close
+    self.cmd_channel.on_file_received(filename)
+  File "server.py", line 55, in on_file_received
+    pubkeypath = 'public/' + pubkeypath.split("/")[-2] + '/camera.pub'
+IndexError: list index out of range
+INFO:pyftpdlib:127.0.0.1:56438-[] FTP session opened (connect)
+INFO:pyftpdlib:127.0.0.1:56438-[camera1] USER 'camera1' logged in.
+INFO:pyftpdlib:127.0.0.1:56438-[camera1] STOR C:\Users\water\Desktop\Camera\source\server\data\camera1\1_2022_02_12_20_00_10.jpg completed=1 bytes=12287 seconds=0.0
+ERROR:pyftpdlib:unhandled exception in instance <DTPHandler(id=63243552, addr='127.0.0.1:56438', user='camera1', sending-file=<_io.BufferedWriter name='C:\\Users\\water\\Desktop\\Camera\\source\\server\\data\\camera1\\1_2022_02_12_20_00_10.jpg'>, bytes-trans=12287)>
+Traceback (most recent call last):
+  File "C:\Users\water\AppData\Local\Programs\Python\Python38-32\lib\asyncore.py", line 83, in read
+    obj.handle_read_event()
+  File "C:\Users\water\AppData\Local\Programs\Python\Python38-32\lib\site-packages\pyftpdlib\handlers.py", line 787, in handle_read
+    chunk = self.recv(self.ac_in_buffer_size)
+  File "C:\Users\water\AppData\Local\Programs\Python\Python38-32\lib\site-packages\pyftpdlib\ioloop.py", line 913, in recv
+    self.handle_close()
+  File "C:\Users\water\AppData\Local\Programs\Python\Python38-32\lib\site-packages\pyftpdlib\handlers.py", line 876, in handle_close
+    self.close()
+  File "C:\Users\water\AppData\Local\Programs\Python\Python38-32\lib\site-packages\pyftpdlib\handlers.py", line 907, in close
+    self.cmd_channel.on_file_received(filename)
+  File "server.py", line 55, in on_file_received
+    pubkeypath = 'public/' + pubkeypath.split("/")[-2] + '/camera.pub'
+IndexError: list index out of range
+INFO:pyftpdlib:127.0.0.1:56441-[] FTP session opened (connect)
+INFO:pyftpdlib:127.0.0.1:56441-[camera1] USER 'camera1' logged in.
+INFO:pyftpdlib:127.0.0.1:56441-[camera1] STOR C:\Users\water\Desktop\Camera\source\server\data\camera1\1_2022_02_12_20_00_12.jpg completed=1 bytes=12287 seconds=0.0
+ERROR:pyftpdlib:unhandled exception in instance <DTPHandler(id=63314912, addr='127.0.0.1:56441', user='camera1', sending-file=<_io.BufferedWriter name='C:\\Users\\water\\Desktop\\Camera\\source\\server\\data\\camera1\\1_2022_02_12_20_00_12.jpg'>, bytes-trans=12287)>
+Traceback (most recent call last):
+  File "C:\Users\water\AppData\Local\Programs\Python\Python38-32\lib\asyncore.py", line 83, in read
+    obj.handle_read_event()
+  File "C:\Users\water\AppData\Local\Programs\Python\Python38-32\lib\site-packages\pyftpdlib\handlers.py", line 787, in handle_read
+    chunk = self.recv(self.ac_in_buffer_size)
+  File "C:\Users\water\AppData\Local\Programs\Python\Python38-32\lib\site-packages\pyftpdlib\ioloop.py", line 913, in recv
+    self.handle_close()
+  File "C:\Users\water\AppData\Local\Programs\Python\Python38-32\lib\site-packages\pyftpdlib\handlers.py", line 876, in handle_close
+    self.close()
+  File "C:\Users\water\AppData\Local\Programs\Python\Python38-32\lib\site-packages\pyftpdlib\handlers.py", line 907, in close
+    self.cmd_channel.on_file_received(filename)
+  File "server.py", line 55, in on_file_received
+    pubkeypath = 'public/' + pubkeypath.split("/")[-2] + '/camera.pub'
+IndexError: list index out of range
+INFO:pyftpdlib:127.0.0.1:56444-[] FTP session opened (connect)
+INFO:pyftpdlib:127.0.0.1:56444-[camera1] USER 'camera1' logged in.
+INFO:pyftpdlib:127.0.0.1:56444-[camera1] STOR C:\Users\water\Desktop\Camera\source\server\data\camera1\1_2022_02_12_20_00_13.jpg completed=1 bytes=12287 seconds=0.0
+ERROR:pyftpdlib:unhandled exception in instance <DTPHandler(id=66599472, addr='127.0.0.1:56444', user='camera1', sending-file=<_io.BufferedWriter name='C:\\Users\\water\\Desktop\\Camera\\source\\server\\data\\camera1\\1_2022_02_12_20_00_13.jpg'>, bytes-trans=12287)>
+Traceback (most recent call last):
+  File "C:\Users\water\AppData\Local\Programs\Python\Python38-32\lib\asyncore.py", line 83, in read
+    obj.handle_read_event()
+  File "C:\Users\water\AppData\Local\Programs\Python\Python38-32\lib\site-packages\pyftpdlib\handlers.py", line 787, in handle_read
+    chunk = self.recv(self.ac_in_buffer_size)
+  File "C:\Users\water\AppData\Local\Programs\Python\Python38-32\lib\site-packages\pyftpdlib\ioloop.py", line 913, in recv
+    self.handle_close()
+  File "C:\Users\water\AppData\Local\Programs\Python\Python38-32\lib\site-packages\pyftpdlib\handlers.py", line 876, in handle_close
+    self.close()
+  File "C:\Users\water\AppData\Local\Programs\Python\Python38-32\lib\site-packages\pyftpdlib\handlers.py", line 907, in close
+    self.cmd_channel.on_file_received(filename)
+  File "server.py", line 55, in on_file_received
+    pubkeypath = 'public/' + pubkeypath.split("/")[-2] + '/camera.pub'
+IndexError: list index out of range
+INFO:pyftpdlib:127.0.0.1:56447-[] FTP session opened (connect)
+INFO:pyftpdlib:127.0.0.1:56447-[camera1] USER 'camera1' logged in.
+INFO:pyftpdlib:127.0.0.1:56447-[camera1] STOR C:\Users\water\Desktop\Camera\source\server\data\camera1\1_2022_02_12_20_00_14.jpg completed=1 bytes=12287 seconds=0.016
+ERROR:pyftpdlib:unhandled exception in instance <DTPHandler(id=66598416, addr='127.0.0.1:56447', user='camera1', sending-file=<_io.BufferedWriter name='C:\\Users\\water\\Desktop\\Camera\\source\\server\\data\\camera1\\1_2022_02_12_20_00_14.jpg'>, bytes-trans=12287)>
+Traceback (most recent call last):
+  File "C:\Users\water\AppData\Local\Programs\Python\Python38-32\lib\asyncore.py", line 83, in read
+    obj.handle_read_event()
+  File "C:\Users\water\AppData\Local\Programs\Python\Python38-32\lib\site-packages\pyftpdlib\handlers.py", line 787, in handle_read
+    chunk = self.recv(self.ac_in_buffer_size)
+  File "C:\Users\water\AppData\Local\Programs\Python\Python38-32\lib\site-packages\pyftpdlib\ioloop.py", line 913, in recv
+    self.handle_close()
+  File "C:\Users\water\AppData\Local\Programs\Python\Python38-32\lib\site-packages\pyftpdlib\handlers.py", line 876, in handle_close
+    self.close()
+  File "C:\Users\water\AppData\Local\Programs\Python\Python38-32\lib\site-packages\pyftpdlib\handlers.py", line 907, in close
+    self.cmd_channel.on_file_received(filename)
+  File "server.py", line 55, in on_file_received
+    pubkeypath = 'public/' + pubkeypath.split("/")[-2] + '/camera.pub'
+IndexError: list index out of range
+INFO:pyftpdlib:concurrency model: async
+INFO:pyftpdlib:masquerade (NAT) address: None
+INFO:pyftpdlib:passive ports: None
+INFO:pyftpdlib:>>> starting FTP server on 127.0.0.1:2121, pid=14092 <<<
+INFO:pyftpdlib:127.0.0.1:56567-[] FTP session opened (connect)
+INFO:pyftpdlib:127.0.0.1:56567-[] USER 'camera1' failed login.
+INFO:pyftpdlib:127.0.0.1:56567-[] FTP session closed (disconnect).
+INFO:pyftpdlib:127.0.0.1:56570-[] FTP session opened (connect)
+INFO:pyftpdlib:127.0.0.1:56570-[] USER 'camera1' failed login.
+INFO:pyftpdlib:127.0.0.1:56570-[] FTP session closed (disconnect).
+INFO:pyftpdlib:127.0.0.1:56574-[] FTP session opened (connect)
+INFO:pyftpdlib:127.0.0.1:56574-[] USER 'camera1' failed login.
+INFO:pyftpdlib:127.0.0.1:56574-[] FTP session closed (disconnect).
+INFO:pyftpdlib:127.0.0.1:56577-[] FTP session opened (connect)
+INFO:pyftpdlib:127.0.0.1:56577-[camera1] USER 'camera1' logged in.
+INFO:pyftpdlib:127.0.0.1:56577-[camera1] STOR C:\Users\water\Desktop\Camera\source\server\data\camera1\1_2022_02_12_20_09_34.jpg completed=1 bytes=12287 seconds=0.0
+INFO:pyftpdlib:127.0.0.1:56577-[camera1] FTP session closed (disconnect).
+INFO:pyftpdlib:127.0.0.1:56580-[] FTP session opened (connect)
+INFO:pyftpdlib:127.0.0.1:56580-[camera1] USER 'camera1' logged in.
+INFO:pyftpdlib:127.0.0.1:56580-[camera1] STOR C:\Users\water\Desktop\Camera\source\server\data\camera1\1_2022_02_12_20_09_36.jpg completed=1 bytes=12287 seconds=0.0
+INFO:pyftpdlib:127.0.0.1:56580-[camera1] FTP session closed (disconnect).
+INFO:pyftpdlib:127.0.0.1:56584-[] FTP session opened (connect)
+INFO:pyftpdlib:127.0.0.1:56584-[camera1] USER 'camera1' logged in.
+INFO:pyftpdlib:127.0.0.1:56584-[camera1] STOR C:\Users\water\Desktop\Camera\source\server\data\camera1\1_2022_02_12_20_09_37.jpg completed=1 bytes=12287 seconds=0.0
+INFO:pyftpdlib:127.0.0.1:56584-[camera1] FTP session closed (disconnect).
+INFO:pyftpdlib:127.0.0.1:56587-[] FTP session opened (connect)
+INFO:pyftpdlib:127.0.0.1:56587-[camera1] USER 'camera1' logged in.
+INFO:pyftpdlib:127.0.0.1:56587-[camera1] STOR C:\Users\water\Desktop\Camera\source\server\data\camera1\1_2022_02_12_20_09_38.jpg completed=1 bytes=12287 seconds=0.0
+INFO:pyftpdlib:127.0.0.1:56587-[camera1] FTP session closed (disconnect).
+INFO:pyftpdlib:127.0.0.1:56590-[] FTP session opened (connect)
+INFO:pyftpdlib:127.0.0.1:56590-[camera1] USER 'camera1' logged in.
+INFO:pyftpdlib:127.0.0.1:56590-[camera1] STOR C:\Users\water\Desktop\Camera\source\server\data\camera1\1_2022_02_12_20_09_40.jpg completed=1 bytes=12287 seconds=0.0
+INFO:pyftpdlib:127.0.0.1:56590-[camera1] FTP session closed (disconnect).
+INFO:pyftpdlib:127.0.0.1:56593-[] FTP session opened (connect)
+INFO:pyftpdlib:127.0.0.1:56593-[] USER 'camera1' failed login.
+INFO:pyftpdlib:127.0.0.1:56593-[] FTP session closed (disconnect).
+INFO:pyftpdlib:127.0.0.1:56596-[] FTP session opened (connect)
+INFO:pyftpdlib:127.0.0.1:56596-[] USER 'camera1' failed login.
+INFO:pyftpdlib:127.0.0.1:56596-[] FTP session closed (disconnect).
+INFO:pyftpdlib:127.0.0.1:56597-[] FTP session opened (connect)
+INFO:pyftpdlib:127.0.0.1:56597-[camera1] USER 'camera1' logged in.
+INFO:pyftpdlib:127.0.0.1:56597-[camera1] STOR C:\Users\water\Desktop\Camera\source\server\data\camera1\1_2022_02_12_20_09_49.jpg completed=1 bytes=12287 seconds=0.0
+INFO:pyftpdlib:127.0.0.1:56597-[camera1] FTP session closed (disconnect).
+INFO:pyftpdlib:127.0.0.1:56600-[] FTP session opened (connect)
+INFO:pyftpdlib:127.0.0.1:56600-[camera1] USER 'camera1' logged in.
+INFO:pyftpdlib:127.0.0.1:56600-[camera1] STOR C:\Users\water\Desktop\Camera\source\server\data\camera1\1_2022_02_12_20_09_51.jpg completed=1 bytes=12287 seconds=0.0
+INFO:pyftpdlib:127.0.0.1:56600-[camera1] FTP session closed (disconnect).
+INFO:pyftpdlib:127.0.0.1:56641-[] FTP session opened (connect)
+INFO:pyftpdlib:127.0.0.1:56641-[camera2] USER 'camera2' logged in.
+INFO:pyftpdlib:127.0.0.1:56641-[camera2] STOR C:\Users\water\Desktop\Camera\source\server\data\camera2\2_2022_02_12_20_13_32.jpg completed=1 bytes=12287 seconds=0.0
+INFO:pyftpdlib:127.0.0.1:56641-[camera2] FTP session closed (disconnect).
+INFO:pyftpdlib:127.0.0.1:56644-[] FTP session opened (connect)
+INFO:pyftpdlib:127.0.0.1:56644-[camera2] USER 'camera2' logged in.
+INFO:pyftpdlib:127.0.0.1:56644-[camera2] STOR C:\Users\water\Desktop\Camera\source\server\data\camera2\2_2022_02_12_20_13_33.jpg completed=1 bytes=12287 seconds=0.0
+INFO:pyftpdlib:127.0.0.1:56644-[camera2] FTP session closed (disconnect).
+INFO:pyftpdlib:127.0.0.1:56647-[] FTP session opened (connect)
+INFO:pyftpdlib:127.0.0.1:56647-[camera2] USER 'camera2' logged in.
+INFO:pyftpdlib:127.0.0.1:56647-[camera2] STOR C:\Users\water\Desktop\Camera\source\server\data\camera2\2_2022_02_12_20_13_35.jpg completed=1 bytes=12287 seconds=0.0
+INFO:pyftpdlib:127.0.0.1:56647-[camera2] FTP session closed (disconnect).
+INFO:pyftpdlib:127.0.0.1:56650-[] FTP session opened (connect)
+INFO:pyftpdlib:127.0.0.1:56650-[camera2] USER 'camera2' logged in.
+INFO:pyftpdlib:127.0.0.1:56650-[camera2] STOR C:\Users\water\Desktop\Camera\source\server\data\camera2\2_2022_02_12_20_13_37.jpg completed=1 bytes=12287 seconds=0.0
+INFO:pyftpdlib:127.0.0.1:56650-[camera2] FTP session closed (disconnect).

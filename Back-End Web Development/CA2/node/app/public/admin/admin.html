@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="">
+  <meta name="keywords" content="DISM Airlines">
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+  <!--Fonts-->
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!--CSS/JS-->
+  <link rel="stylesheet" href="css/styles.css?v=1.0">
+  <script src="js/admin.js"></script>
+
+  <title>SP AIR</title>
+  
+	<script>
+		setInterval( function(){fetch("/refresh")} , 10*60*1000 );
+		$(document).ready(function () {
+			$("#addAirport").click(function() { 
+				
+				var airport = $('#airport').val();
+				var country = $('#country').val();
+				var description = $('#description').val();
+				var data = JSON.stringify({name: airport, country: country, description: description,})
+				fetch('/airport', {
+				  method: 'POST',
+				  mode: 'cors',
+				  cache: 'no-cache',
+				  credentials: 'same-origin',
+				  headers: {
+					'Content-Type': 'application/json',
+				  },
+				  body: data,
+				})
+				.then(response => response.json())
+				.then(data => {
+				  $('#message').html(`Successfully added ${airport}.`);
+				})
+				.catch((error) => {
+				  $('#message').html('Failed to add airport.'); 
+				});
+			});
+			$("#addFlight").click(function() { 
+				var originAirport = changeorigid
+				var destinationAirport = changedestid
+				var flightCode = $('#flightCode').val();
+				var aircraft = $('#aircraft').val();
+				var embarkDate = $('#embarkDate').val().replace('T', " ");
+				var travelTime = $('#travelTime').val();
+				var price = $('#price').val();
+				var data = JSON.stringify({flightCode: flightCode, aircraft: aircraft, originAirport: originAirport, destinationAirport: destinationAirport, embarkDate: embarkDate, travelTime: travelTime, price: price,})
+				fetch('/flight', {
+				  method: 'POST',
+				  mode: 'cors',
+				  cache: 'no-cache',
+				  credentials: 'same-origin',
+				  headers: {
+					'Content-Type': 'application/json',
+				  },
+				  body: data,
+				})
+				.then(response => response.json())
+				.then(data => {
+				  $('#message1').html(`Successfully added ${flightCode}.`);
+				})
+				.catch((error) => {
+				  $('#message1').html('Failed to add flight.'); 
+				});
+			}); 				
+		});  		
+	</script>
+</head>
+
+<body>
+  Navbar
+  <nav class="navbar navbar-expand-lg fixed-top ">
+    <a class="navbar-brand" href="index.html">SP AIR</a>
+    <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse"
+      data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="flight.html">Check Flight</a>
+        </li>
+		<li class="nav-item">
+          <a href="profile.html" class="profileButton"><i class="fa fa-user"></i></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- Welcome -->
+  <header class="filler"></header>
+    <section class="section">
+	     <div class="container">
+            <form>
+                <div class="form-row">
+                    <div class="form-group col-lg-6 col-md-12 col-sm-12">
+						<input type="text" class="form-control" id="airport" placeholder="Airport" required>
+                    </div>
+                    <div class="form-group col-lg-6 col-md-12 col-sm-12">
+						<input type="text" class="form-control" id="country" placeholder="Country" required>
+                    </div>
+                    <div class="form-group col-lg-12 col-md-12 col-sm-12">
+                        <input type="text" class="form-control" id="description" placeholder="Description" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-check col-lg-8 col-md-8 col-sm-12 pl-4">
+						<div class="container" ><a style="color:white;" id="message"></a></div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-12">
+                        <button type="button" id="addAirport" class="btn btn-primary float-right">Add Airport</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="container" style="background-color: #111927;overflow-y: scroll;overflow-x: scroll; height:500px; width:1000px;" id="airports">
+        </div>
+    </section>
+	<section class="filler"></section>
+    <section class="section">
+	     <div class="container">
+            <form>
+                <div class="form-row">
+                    <div class="form-group col-lg-6 col-md-12 col-sm-12" id="To">
+                    </div>
+                    <div class="form-group col-lg-6 col-md-12 col-sm-12" id="From">
+                    </div>
+                    <div class="form-group col-lg-12 col-md-12 col-sm-12">
+                        <input type="text" class="form-control" id="flightCode" placeholder="Flight Code" required>
+                    </div>
+                    <div class="form-group col-lg-12 col-md-12 col-sm-12">
+                        <input type="text" class="form-control" id="aircraft" placeholder="Aircraft" required>
+                    </div>
+                    <div class="form-group col-lg-12 col-md-12 col-sm-12">
+                        <input type="datetime-local" class="form-control" id="embarkDate" required>
+                    </div>
+                    <div class="form-group col-lg-12 col-md-12 col-sm-12">
+                        <input type="text" class="form-control" id="travelTime" placeholder="Travel Time" required>
+                    </div>
+                    <div class="form-group col-lg-12 col-md-12 col-sm-12">
+                        <input type="text" class="form-control" id="price" placeholder="Price" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-check col-lg-8 col-md-8 col-sm-12 pl-4">
+						<div class="container" ><a style="color:white;" id="message1"></a></div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-12">
+                        <button type="button" id="addFlight" class="btn btn-primary float-right">Add Flight</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="container" style="background-color: #111927;overflow-y: scroll;overflow-x: scroll; height:500px; width:1000px;" id="flights">
+        </div>
+    </section>
+  <section class="filler"></section>
+  <!-- Footer -->
+  <footer class="page-footer fixed-bottom">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <h5>Copyright SP AIR © 2022. All rights reserved.</h5>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

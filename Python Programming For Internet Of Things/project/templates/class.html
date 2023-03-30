@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+<table>
+  <tr>
+    <th></th>
+    <th>Class</th>
+  </tr>
+  {% for class in classes %}
+  <tr>
+    <td>{{ loop.index }}</td>
+    <td><a href="class/{{ loop.index }}">{{ class[0] }}</a></td>
+  </tr>
+  {% endfor %}
+</table>
+
+</body>
+</html>
