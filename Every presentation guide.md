@@ -8,7 +8,7 @@ How to start a talk.
 
 Sample Heuristics:
 
-1. Cycle on the topic. Repeat what are talking about to reinforce it
+1. Cycle on the topic. Repeat what you are talking about to reinforce it
 2. Build a fence around your ideas, so audiences don't confuse them with the ideas from others. Tell them how your idea is different from others.
 3. Use verbal punctuation to help audiences re-focus. State what you have covered so far and what is there to come.
 4. Ask questions. Engage the audience with moderately difficult questions every now and then. But not very difficult ones.
